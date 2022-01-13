@@ -1,0 +1,6 @@
+filename,Image,Mask
+brain12_NODDI_ExVivo_NDI_masked.nii.gz,../images/NDI/male/P45/control/brain12_NODDI_ExVivo_NDI_masked.nii.gz,../roi/r_hippocampus/roi52_eroded.nii.gz
+brain1_NODDI_ExVivo_NDI_masked.nii.gz,../images/NDI/male/P45/control/brain1_NODDI_ExVivo_NDI_masked.nii.gz,../roi/r_hippocampus/roi52_eroded.nii.gz
+brain3_NODDI_ExVivo_NDI_masked.nii.gz,../images/NDI/male/P45/control/brain3_NODDI_ExVivo_NDI_masked.nii.gz,../roi/r_hippocampus/roi52_eroded.nii.gz
+brain4_NODDI_ExVivo_NDI_masked.nii.gz,../images/NDI/male/P45/control/brain4_NODDI_ExVivo_NDI_masked.nii.gz,../roi/r_hippocampus/roi52_eroded.nii.gz
+brain2_NODDI_ExVivo_NDI_masked.nii.gz,../images/NDI/male/P45/control/brain2_NODDI_ExVivo_NDI_masked.nii.gz,../roi/r_hippocampus/roi52_eroded.nii.gz
