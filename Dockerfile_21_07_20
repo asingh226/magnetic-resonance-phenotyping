@@ -1,0 +1,37 @@
+# Build Pyradiomics inside the Jupyter Datascience Notebook
+# modification of John Garret original Dockerfile
+# main changes include pulling the required pyradiomics and python set-up files from a simplified folder structure called 'requirements' rather than pulling from the original pyradiomics file structure
+# adds package 'seaborn', 'statsmodel','dash','matplotlib-venn', updates jupyterlab to the container
+# container starts in directory called '/local_dir'; mounting your local directory in the docker run call and mapping it to '/local_dir' will cause the container to begin in the directory that is saved locally rather than in a directory that is within the container
+# can access the container directory by 'cd ~'
+# on a fresh container, root directory should contain 'requirements' directory only
+
+FROM nvcr.io/nvidia/pytorch:21.03-py3
+
+MAINTAINER Radiomics Project (http://github.com/radiomics)
+
+# Build information
+ARG BUILD_DATE
+ARG GIT_REF
+
+LABEL org.label-schema.build-data=$BUILD_DATE \
+      org.label-schema.vcs-url="https://github.com/radiomics/pyradiomics.git" \
+      org.label-schema.vcs-ref=$GIT_REF \
+      org.label-schema.schema-version="1.0.0-rc1"      
+
+USER root
+RUN DEBIAN_FRONTEND=noninteractive apt-get -y update
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates wget curl
+ADD UWHEALTHROOT.crt /usr/local/share/ca-certificates/UWHEALTHROOT.crt
+RUN chmod 644 /usr/local/share/ca-certificates/UWHEALTHROOT.crt && update-ca-certificates
+
+RUN pip --trusted-host pypi.org --trusted-host files.pythonhosted.org install jupyter jupyterlab==3.1.0rc1 toposort pillow nibabel opencv-python matplotlib scipy keras pandas torchvision seaborn statsmodels matplotlib-venn dash
+#RUN pip --trusted-host pypi.org --trusted-host files.pythonhosted.org install rasa --user --ignore-installed ruamel.yaml 
+ADD ./requirements /root/requirements
+
+# Install in Python 3
+RUN source activate root 
+WORKDIR /root/requirements
+RUN python -m pip  --trusted-host pypi.org --trusted-host files.pythonhosted.org install --ignore-installed --no-cache-dir -r requirements.txt
+RUN python setup.py install
+WORKDIR /local_dir
