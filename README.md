@@ -1,3 +1,3 @@
-# manuscript1_radiomics_example
+# Magnetic Resonance Phenotyping
 
 Here we go!
