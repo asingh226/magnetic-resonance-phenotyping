@@ -2,7 +2,7 @@
 
 This repository contains all the code and files needed to run an MRP analysis on several rat models of altered neurodevelopment (_Disc1, Nrxn1, Pten, Fmr1_). All images used here are NODDI (**N**eurite **O**rientation **D**ispersion and **D**ensity **I**maging) images. NODDI is a microstructural modelling approach for diffusion MRI data [Zhang *et al.*, NeuroImage 2012]. 
 
-Below is a description of each folder in the repository, its contents and its role in the pipeline.
+Below is a description of directories and files in the repository, its contents, and its role in the pipeline.
 
 **Repository layout**
 - [images](#images)
