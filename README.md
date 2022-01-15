@@ -24,10 +24,13 @@ This directory contains all NODDI images divided by the NODDI compartment image 
 ## notebooks
 This directory contains the sub-directory 'python_functions' and two Jupyter notebooks: "Radiomics Processing.ipynb" and "MRP Analysis Pipeline.ipynb" 
 
+
 ### Radiomics Processing.ipynb
 This notebook contains the function used to create the necessary directories to organize the radiomics processing of images and the function to process batches of images. In-line comments describe each functoin and its use in detail. There is also an example processing run. 
 - **create_directories**: creates directories to set-up the directory structure for radiomics processing and MRP analysis
 - **imageBatchProcess**: function to perform iterative batch radiomics processing
+
+
 
 ### MRP Analysis Pipeline.ipynb
 This notebook contains the functions to run a magnetic resonsance analysis and visualization and in-line comments describing each function and its use in detail. It also has an example analysis of the _Nrxn_ data. Below is a list of the functions and a brief description:
@@ -36,6 +39,7 @@ This notebook contains the functions to run a magnetic resonsance analysis and v
 - **feature_heatmap**: uses feature_table output to produce MRP heatmap signatures
 - **feature_jaccard_score**: uses feature_table outputs to calculate Jaccard similarity index for MRP signatures
 - **volcanoPlot**: uses feature_table output to generate volcano plot of MRP signatures
+
 
 ### python_functions
 This sub-directory contains an "__ init__.py" to enable function importing from this directory and  "YuLabbatchProcessingWithPandas.py" which is a python file adapted and modified from the original PyRadiomics pipeline and contains a function that will be used in "Radiomics Processing.ipynb"
