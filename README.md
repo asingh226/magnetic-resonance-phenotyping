@@ -7,8 +7,8 @@ Below is a description of directories and files in the repository, its contents,
 **Repository layout**
 - [images](#images)
 - [notebooks](#notebooks)
-  - [Radiomics Processing.ipynb](#radiomics-processing.ipynb)
-  - [MRP Analysis Pipeline.ipynb](#mrp-analysis-pipeline.ipynb)
+  - [Radiomics Processing.ipynb](#radiomics-processingipynb)
+  - [MRP Analysis Pipeline.ipynb](#mrp-analysis-pipelineipynb)
   - [python_functions](#python_functions)
 - [radiomics_data_control + radiomics_data_nrxn](#radiomics_data_control-+-radiomics_data_nrxn)
 - [radiomics_features_list](#radiomics_features_list)
